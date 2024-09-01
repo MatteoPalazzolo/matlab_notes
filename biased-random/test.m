@@ -3,8 +3,8 @@ close all;
 clc;
 
 %plot_mixed(-1, 1, @(x) x.^2)
-plot_mixed(-1, 1, @(x) x.^3)
-plot_mixed(-2000, 2000, @(x) x.^3)
+%plot_mixed(-1, 1, @(x) x.^3)
+%plot_mixed(-2, 2, @(x) x.^3)
 %plot_mixed(-1, 1, @(x) x.^4)
 plot_mixed(-.5, .5, @(x) atan(x))
 plot_mixed(-1, 1, @(x) atan(x))
