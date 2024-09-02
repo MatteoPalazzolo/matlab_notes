@@ -8,12 +8,12 @@ clc;
 % dom=[-i i] -> i is the strenght
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%displayDistribution(1);
+displayDistribution(1);
 displayDistribution(2);
 displayDistribution(5);
 displayDistribution(20);
 
-%displayDistributionGraph(1);
+displayDistributionGraph(1);
 displayDistributionGraph(2);
 displayDistributionGraph(5);
 displayDistributionGraph(20);
@@ -27,15 +27,12 @@ function displayDistribution(i)
 
     % normal random [0 1]
     r = rand(1,dots_n);
-    %figure; plot(1:dots_n, r);
 
     % random in [-i i]
     rb = 2*i .* r - i;
-    %figure; plot(1:dots_n, rb);
 
     % biased random [0 1]
     rn = (f(rb)./2 + f(i)/2) ./ f(i);
-    %figure; plot(1:dots_n, rn);
 
     figure("Name",sprintf("Distribution with i = %d", i))
     hold on

@@ -28,15 +28,12 @@ function displayDistribution(i)
 
     % normal random [0 1]
     r = rand(1,dots_n);
-    %figure; plot(1:dots_n, r);
 
     % random in [-i i]
     rb = 2*v .* r - v;
-    %figure; plot(1:dots_n, rb);
 
     % biased random [0 1]
     rn = (f(rb)./2 + f(v)/2) ./ f(v);
-    %figure; plot(1:dots_n, rn);
 
     figure("Name",sprintf("Distribution with i = %d", v))
     hold on

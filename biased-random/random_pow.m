@@ -20,20 +20,18 @@ displayDistributionGraph(3);
 %%%%%%%%% FUNCTIONS %%%%%%%%%
 
 function displayDistribution(i)
-    p = 2*i+1;
     dots_n = 500;
+    p = 2*i+1;
+    f = @(x) x.^p;
 
     % normal random [0 1]
     r = rand(1,dots_n);
-    %figure; plot(1:1:dots_n, r);
 
     % biased random [-1 1]
-    rn = (2.*r - 1).^p;      
-    %figure; plot(1:1:dots_n, rn);
+    rn = f(2.*r - 1);
     
     % biased random [0 1]
     rn = rn.*.5 + .5;
-    %figure; plot(1:1:dots_n, rn);
 
     bbar = .6;
     abar = .4;
