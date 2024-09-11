@@ -9,12 +9,10 @@ clc;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 displayDistribution(1);
-displayDistribution(2);
 displayDistribution(5);
 displayDistribution(20);
 
 displayDistributionGraph(1);
-displayDistributionGraph(2);
 displayDistributionGraph(5);
 displayDistributionGraph(20);
 

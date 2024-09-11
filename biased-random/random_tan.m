@@ -9,12 +9,10 @@ clc;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 displayDistribution(.3);
-displayDistribution(.5);
 displayDistribution(.8);
 displayDistribution(.99);
 
 displayDistributionGraph(.3);
-displayDistributionGraph(.5);
 displayDistributionGraph(.8);
 displayDistributionGraph(.99);
 
@@ -35,7 +33,7 @@ function displayDistribution(i)
     % biased random [0 1]
     rn = (f(rb)./2 + f(v)/2) ./ f(v);
 
-    figure("Name",sprintf("Distribution with i = %d", v))
+    figure("Name",sprintf("Distribution with i = %d", i))
     hold on
     plot(1:dots_n, r ,'ro');
     plot(1:dots_n, rn,'go');
@@ -48,7 +46,7 @@ function displayDistributionGraph(i)
     b = v;
     f = @(x) tan(x);
     
-    figure("Name",sprintf("Graph with i = %d", v))
+    figure("Name",sprintf("Graph with i = %d", i))
     axis([a b f(a) f(b)])
     hold on
 
